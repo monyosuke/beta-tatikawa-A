@@ -28,6 +28,10 @@ body {
   margin: 0;
 }
 
+img{
+  width: 100%
+}
+
 img.e-image {
   width: 100px;
 }
