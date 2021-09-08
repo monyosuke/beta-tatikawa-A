@@ -124,6 +124,7 @@ app.component('answer-input', {
         this.$emit('answerInput', false);
       }
     },
-    function CountdownTimer(elm, tl, mes) {
-this.initialize.apply(this, arguments);
-}
+  }
+})
+
+app.mount('#stage')
