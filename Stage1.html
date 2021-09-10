@@ -73,12 +73,12 @@
           v-if="clear['stage1']"はclear['stage1']がtrueになったら表示します。
           v-bind:class="{isClear:clear['stage1']}"はclear['stage1']がtrueになったら「isClear」クラスを追加します。
         -------------------------------------------------------------------------------------------------------->
-        <section v-if="clear['stage1']" v-bind:class="{isClear:clear['stage1']}"  class="section section--clear bg-color--gray">
+        <!-- <section v-if="clear['stage1']" v-bind:class="{isClear:clear['stage1']}"  class="section section--clear bg-color--gray"> -->
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">congratulations！</div>
               <div class="clear-message__content">今すぐ100万円を受け取ろう！<br>
-              <button v-on:click="nextStage('stage1')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">→受け取る←<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+<button v-on:click="nextStage('stage1')" onclick="location.href='./Stage2.html'" class="clear-message__btn btn">100万円を受け取ろう！<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
         </section>
