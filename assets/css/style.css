@@ -36,6 +36,10 @@ img.e-image {
   width: 100px;
 }
 
+img.logo{
+  width: 200px; height: 42px;
+}
+
 
 
 figure {
