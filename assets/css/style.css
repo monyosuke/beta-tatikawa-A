@@ -40,7 +40,13 @@ img.logo{
   width: 200px;
 }
 
+summary {
+	list-style: none;
+}
 
+summary::-webkit-details-marker {
+	display: none;
+}
 
 figure {
   margin: 0;
