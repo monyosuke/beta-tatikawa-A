@@ -37,22 +37,22 @@
      <!-- <div v-if="next['stage1']" id="sectionStage2" class="stage"> -->
         <section>
           <div class="section">
-            <div class="container">
-              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>ウイルスに感染しました</h2>
-              <p class="text-center">　　100万円がもらえるわけなかろう。<br>
+            <div class="background-color"> <!--"container"--> 
+              <h1 class="section-title section-title--keycolorlight"><span class="section-title__stage"><!--STAGE：2--></span>ウイルスに感染しました</h1>
+              <p class="text-center">　　警告─ウイルスに感染しました。今すぐ除去するにはこの謎を解いて表示されるURLにアクセスしてください。<br>Warning!!-You have been infected with a virus. To remove it now, solve this riddle and go to the URL shown.
                 </p>
               
             <figure class="image__container">
                 <img src="assets/images/謎解き2.png" alt="">
               </figure>
-              
-              </div>
+            </div>
           </div>
           <div class="stage-column__container section bg-color--keycolor">
             <div class="container">
-              <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>答えを入力(カタカナ)</h2>
+              <h2 class="computervirus-title"><span class="section-title__stage"><!--STAGE：2--></span>答えを入力してウイルスを除去する(カタカナ)</h2>
               <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
-              <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
+              
+              <!-- 物語設定的にヒントをオフにしてます。必要な場合ここを修正してください。 <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a> -->
 
             </div>
           </div>
@@ -62,10 +62,10 @@
        <section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">
           <div class="container">
             <div class="clear-message">
-              <div class="clear-message__title">STAGE：2　クリア！</div>
-              <div class="clear-message__content">やるじゃないか<br>
-                次のステージの謎を解こう！</div>
-               <button v-on:click="nextStage('stage1')" onclick="location.href='./Stage3.html'" class="clear-message__btn btn">100万円を受け取ろう！<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+              <div class="clear-message__title">いますぐ除去を行ってください。</div>
+              <div class="clear-message__content">除去を行わなかった場合個人情報の流出等に繋がります。<br>
+                Failure to do so will lead to leakage of personal information.</div>
+               <button v-on:click="nextStage('stage1')" onclick="location.href='./Stage3.html'" class="clear-message__btn btn">除去する<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
         </section>
