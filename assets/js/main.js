@@ -25,7 +25,7 @@ const app = Vue.createApp({
         },
         stage3: {
           q1: 'ウイルス',
-        }
+        },
       },
 
       /* それぞれの問題が正解かどうか
