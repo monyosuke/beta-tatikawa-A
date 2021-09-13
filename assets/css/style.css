@@ -48,6 +48,10 @@ summary::-webkit-details-marker {
 	display: none;
 }
 
+computervirus-bgi{
+  background-color: #ff0000;
+}
+
 figure {
   margin: 0;
 }
