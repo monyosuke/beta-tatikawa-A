@@ -123,4 +123,37 @@ app.component('answer-input', {
   }
 })
 
+app.component('computervirus-answer-input', {
+  props: ['correct'],
+  data: function () {
+    return {
+      /* 送信ボタン上下に表示されるメッセージ */
+      okMessage: '除去が可能になりました',
+      ngMessage: '除去できません',
+      message: '',
+      inputAnswer: '',
+    }
+  },
+  template: `
+    <div class="answer__container">
+      <div class="answer">
+        <input type="text" v-model="inputAnswer" placeholder="答えを入力してウイルスを除去してください。">
+      </div>
+      <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
+      <button v-on:click="judgement(inputAnswer)">送信</button>
+      <p v-if="message === okMessage" class="err-message">{{ message }}</p>
+    </div>`,
+  methods: {
+    judgement(answer) {
+      if(answer === this.correct) { // 入力値が解答と一致する場合
+        this.message = this.okMessage;
+        this.$emit('answerInput', true);
+      } else { // 一致しない場合
+        this.message = this.ngMessage; 
+        this.$emit('answerInput', false);
+      }
+    },
+  }
+})
+
 app.mount('#stage')
