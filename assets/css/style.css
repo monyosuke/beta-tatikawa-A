@@ -28,6 +28,26 @@ body {
   margin: 0;
 }
 
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+li{
+  list-style:none;
+  background-color:#ffffff;
+  padding:16px;
+  margin:8px;
+  width:500px;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 img{
   width: 100%
 }
@@ -63,6 +83,15 @@ summary::-webkit-details-marker {
 
 .computervirus-textcolor{
   color: #fff;
+}
+
+progress[value] {
+  appearance: none;
+  backgroud-color: #006837;
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 20px;
+  width: 500px;
 }
 
 figure {
