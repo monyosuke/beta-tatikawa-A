@@ -60,6 +60,11 @@ img.logo{
   width: 200px;
 }
 
+img.danger{
+  width:200px;
+  height:200px;
+}
+
 summary {
 	list-style: none;
 }
