@@ -24,7 +24,7 @@ const app = Vue.createApp({
           q1: 'かいじょ',
         },
         stage3: {
-          q1: 'ウイルス',
+          q1: 'インターネット',
         },
       },
 
