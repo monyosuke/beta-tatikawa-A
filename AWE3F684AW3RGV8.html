@@ -64,6 +64,7 @@
       
        <!--<section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear computervirus-bgi">-->
        <div id="hide" class="section section--clear isClear computervirus-bgi">
+         <!--
          <script>
            document.getElementById("hide").style.visibility = "hidden";
            document.getElemenyById("Tips").style.display = "none";
@@ -96,6 +97,7 @@
              }
           }
         </script>
+-->
           <div class="container">
             <div class="clear-message">
               <div class="cv-clear-message__title">いますぐ除去を行ってください。</div>
@@ -106,6 +108,38 @@
           </div>
       　</div>
       </div>
+           <script>
+           document.getElementById("hide").style.visibility = "hidden";
+           document.getElemenyById("Tips").style.display = "none";
+           
+           var int = 0;
+           var ans = "かいじょ";
+
+           function Judge(){
+             if(document.getElementById("field").value == ans)
+             {
+               console.log("正解");
+               next();
+             }
+             else
+             {
+               int++;
+               if(int == 2)
+               {
+                 console.log("ヒント表示");
+                 show();
+               }
+             }
+
+             function next(){
+               document.getElementById("hide").style.visibility = "visible"; 
+             }
+             
+             function show(){
+               document.getElementById("Tips").style.display = "block"; 
+             }
+          }
+        </script>
   </main>
 
 
