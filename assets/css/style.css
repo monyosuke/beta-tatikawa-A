@@ -28,6 +28,15 @@ body {
   margin: 0;
 }
 
+input.it{
+  border: none;
+  padding: 25px 35px;
+  display: block;
+  margin: 0 auto;
+  max-width: 580px;
+  width: 100%;
+}
+
 ul {
 	list-style-type: none;
 	padding-left: 0;
