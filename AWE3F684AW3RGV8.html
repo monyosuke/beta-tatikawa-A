@@ -15,26 +15,9 @@
       <polygon points="0 24.94 0 19.66 7.35 12.47 0 5.92 0 0 12.47 12.47 0 24.94"/>
     </symbol>
   </svg>
-  <!--
-  <header class="header">
-    <div class="container">
-      <div class="header__logo"><img src="assets/images/プロNβ_チームロゴ修正後2.png" alt="チームロゴ" class="logo"></div>
-      <div class="header__name">N・S高生制作サイト</div>
-    </div>
-  </header>
-  <main class="main main-page">
-    <!-- タイトルエリア　ここから 
-    <h1 class="main-title"><img src="assets/images/プロNβ_ヘッダー.png" alt="謎が解けたら１００万円！！"></h1>
-    <!-- タイトルエリア　ここまで 
-  -->
+  
+  
     <div id="stage">
-
-      <!-- STAGE2　ここから -->
-      <!---------------------------------------------------------------------
-        クリア画面の「次のステージへ」ボタンをクリックしたら表示します。
-        v-if="next['stage1']"はnext['stage1']がtrueになったら表示します。
-      ----------------------------------------------------------------------->
-     <!-- <div v-if="next['stage1']" id="sectionStage2" class="stage"> -->
         <section>
           <div class="section computervirus-bgi">
             <div class="computervirus-bgi"> <!--"container"--> 
@@ -48,14 +31,21 @@
                 <figure class="image__container">
                   <img src="assets/images/謎解き2.png" alt="">
                 </figure>
-              </div>
-            </div>
-          </div>
+             </div>
+           </div>
+         </div>
+          
+          
           <div class="stage-column__container section computervirus-bgi"><!--"stage-column__container section bg-color--keycolor"-->
             <div class="container">
               <h2 class="computervirus-title computervirus-textcolor"><span class="section-title__stage"><!--STAGE：2--></span>答えを4文字入力してウイルスを除去する(ひらがな)</h2>
-            　<!-- <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="computervirus-answer-input($event, 'stage2', 1)"></answer-input> -->
-             <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
+              <!--<answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>-->
+              
+              <div>
+                <input id="field" class="it" text="text" value=""> 
+                <br>
+                <button onclick="Judge()">送信</button>
+              </div>
               
               <!-- 物語設定的にヒントをオフにしてます。必要な場合ここを修正してください。 <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a> -->
 
@@ -63,8 +53,35 @@
           </div>
         </section>
 
-        <!-- STAGE2クリア画面　ここから -->
-       <section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear computervirus-bgi">
+      
+       <!--<section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear computervirus-bgi">-->
+       <div id="hide" class="section section--clear isClear computervirus-bgi">
+         <script>
+           document.getElementById("hide").style.visibility = "hidden";
+
+           var int = 0;
+           var ans = "かいじょ";
+
+           function Judge(){
+             if(document.getElementById("field").value == ans)
+             {
+               console.log("正解");
+               show();
+             }
+             else
+             {
+               int++;
+               if(int == 3)
+               {
+                 console.log("ヒント出題"); 
+               }
+             }
+
+             function show(){
+               document.getElementById("hide").style.visibility = "visible"; 
+             }
+          }
+        </script>
           <div class="container">
             <div class="clear-message">
               <div class="cv-clear-message__title">いますぐ除去を行ってください。</div>
@@ -74,12 +91,11 @@
             </div>
           </div>
         </section>
-        <!-- STAGE2クリア画面　ここまで -->
       </div>
-      <!-- STAGE2　ここまで -->
-
     </div>
   </main>
+
+
   <footer class="footer section computervirus-bgi"><!--"footer section bg-color--gray"-->
     <div class="container">
        <details> <summary> <center>──────────────────────────────</center> </summary>
